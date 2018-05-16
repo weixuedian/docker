@@ -4,9 +4,9 @@ FROM centos:7.4.1708
 MAINTAINER sujian "112606652@qq.com"
 
 #install docker
-ENV DOCKER_FILE=docker-engine-1.13.1-1.el7.centos.x86_64.rpm
+ENV DOCKER_FILE=docker-engine-1.12.6-1.el7.centos.x86_64.rpm
  COPY centos7_base.repo /etc/yum.repos.d/CentOS-Base.repo
-RUN yum install -y docker-engine-selinux gcc-c++ make iptables libcgroup selinux-policy wget git
+RUN yum install -y docker-engine-selinux gcc-c++ make iptables libcgroup selinux-policy wget git libseccomp libtool-ltdl
 
 COPY ${DOCKER_FILE} /opt/
 COPY entry.sh /opt/
