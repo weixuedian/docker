@@ -27,6 +27,8 @@ ENV CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib
 ENV MAVEN_HOME=/opt/apache-maven-3.2.5
 ENV PATH=${JAVA_HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${MAVEN_HOME}/bin:${CLASSPATH}:${JRE_HOME}
 
+volumes = ["/cache","/opt/gitlabci/.m2:/root/.m2","/opt/gitlabci/builds:/builds"]
+
 #set work dir
 WORKDIR /opt
 #enable systemd
