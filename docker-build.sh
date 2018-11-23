@@ -6,8 +6,8 @@ docker rm -fv testaa
 docker build -t "registry.cn-beijing.aliyuncs.com/tigers/gogitlab:1.10" .
 docker push "registry.cn-beijing.aliyuncs.com/tigers/gogitlab:1.10"
 
-#docker build -t "docker-registry.hexun.com/golang/gogitlab:1.10" .
-#docker push "docker-registry.hexun.com/golang/gogitlab:1.10"
+#docker build -t "docker-registry.xx.com/golang/gogitlab:1.10" .
+#docker push "docker-registry.xx.com/golang/gogitlab:1.10"
 
 
 
