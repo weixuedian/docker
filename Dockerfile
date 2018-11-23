@@ -4,7 +4,7 @@ FROM centos:7.4.1708
 MAINTAINER sujian "112606652@qq.com"
 
 #install docker
-ENV DOCKER_FILE=docker-engine-1.12.6-1.el7.centos.x86_64.rpm
+ENV DOCKER_FILE=docker-engine-1.10.3-1.el7.centos.x86_64.rpm
  COPY centos7_base.repo /etc/yum.repos.d/CentOS-Base.repo
 RUN yum install -y docker-engine-selinux gcc-c++ make iptables libcgroup selinux-policy wget git libseccomp libtool-ltdl which 
 COPY ${DOCKER_FILE} /opt/
@@ -27,7 +27,7 @@ ENV CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib
 ENV MAVEN_HOME=/opt/apache-maven-3.2.5
 ENV PATH=${JAVA_HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${MAVEN_HOME}/bin:${CLASSPATH}:${JRE_HOME}
 
-volumes = ["/cache","/opt/gitlabci/.m2:/root/.m2","/opt/gitlabci/builds:/builds"]
+VOLUME = ["/cache","/opt/gitlabci/.m2:/root/.m2","/opt/gitlabci/builds:/builds","/go/src:/go/src"]
 
 #set work dir
 WORKDIR /opt
