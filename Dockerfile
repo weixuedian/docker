@@ -21,7 +21,7 @@ RUN cd /opt && wget https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.
 && ls -l && tar zxvf apache-maven-3.2.5-bin.tar.gz
 
 #install env
-ENV JAVA_HOME=/usr/lib/jvm/x86_64/1.22.2-8.el7.x86_64
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191-1.b12.el7.x86_64
 ENV JRE_HOME=${JAVA_HOME}/jre
 ENV CLASSPATH=.:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib
 ENV MAVEN_HOME=/opt/apache-maven-3.2.5
