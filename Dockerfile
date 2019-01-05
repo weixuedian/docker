@@ -19,7 +19,6 @@ RUN yum install -y java-1.8.0-openjdk-devel
 #install maven
 RUN cd /opt && wget https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz \
 && ls -l && tar zxvf apache-maven-3.2.5-bin.tar.gz
-
 #install env
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64
 ENV JRE_HOME=${JAVA_HOME}/jre
